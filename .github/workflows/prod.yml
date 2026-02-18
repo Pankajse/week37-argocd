@@ -34,6 +34,7 @@ jobs:
           PAT: ${{ secrets.PAT }}
         run: |
           git clone https://github.com/Pankajse/week37-argo-cd.git
+          cd week37-argo-cd
 
           sed -i 's|image: pankaj42se/week37-argocd:.*|image: pankaj42se/week37-argocd:${{ github.sha }}|' manifest.yml
 
